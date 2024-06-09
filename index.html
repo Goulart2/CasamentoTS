@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/850a0de5b4.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="img/.png">
+    <title>Thaís & Samuel</title>
+</head>
+<script>
+    document.documentElement.classList.add("js");
+</script>
+
+<div class="abrir">
+    <div>
+        <img src="img/floresCiruclo.png" alt="circulo">
+        <p class="font-Hs-sm nomes" data-anime="200">Thaís & Samuel</p>
+    </div>
+
+    <div class="bntConvite" onclick="playaudio(), removeModal()">
+        <button class="frase font-1-400 btn-js" data-anime="600">
+            <img class="iconConvite" src="img/convite-de-casamento.png">
+        </button>
+
+        <p>
+            abrir convite
+        </p>
+    </div>
+
+</div>
+
+<body>
+    <div class="home">
+        <div class="informacoes">
+            <div class="containerImgCasal">
+                <img class="imgCasal" src="./img/fotoInicial.jpeg" alt="">
+
+                <span class="beforeImg"></span>
+
+            </div>
+            <div class="imgVersiculo">
+                <p>Foi o Senhor que fez isso e é maravilhoso aos nossos olhos <br> (Salmos 118:2-3)</p>
+            </div>
+
+
+            <div class="c_textInformation">
+                <p class="font-Hs-sm">Thaís & Samuel</p>
+                <p class="font-1-300">Convidam para a celebração<br> de seu casamento.</p>
+                <p class="informationDate">03 de Agosto de 2024, às 15:00h</p>
+            </div>
+
+
+            <div id="countdown">
+                <div><span id="days"></span>Dias</div>
+                <div><span id="hours"></span>Horas</div>
+                <div><span id="minutes"></span>Min</div>
+                <div><span id="seconds"></span>Seg</div>
+            </div>
+
+            
+            <div class="links font-1-400-s">
+                <div class="local linkContents">
+                    <a href="https://goo.gl/maps/skk9x8KArD7WVnvh9" target="_blank">
+                        <div>
+                            <img src="./img/placeholder.png" alt="icon-local">
+                        </div>
+
+                        <p>Local<br>Cerimônia</p>
+                    </a>
+                </div>
+
+                <div class="confirmar linkContents">
+                    <a href="https://noivos.casar.com/samuel-thais#/one-page/_start"
+                        target="_blank">
+                        <div>
+                            <img src="./img/aceitar.png" alt="icon-local">
+                        </div>
+
+                        <p>Confimar <br>Presença</p>
+                    </a>
+                </div>
+
+                <div class="lista linkContents">
+                    <a href="https://noivos.casar.com/samuel-thais#/one-page/_start" target="_blank">
+                        <div>
+                            <img src="./img/caixa-de-presente.png" alt="icon-local">
+                        </div>
+
+                        <p>Lista de<br> Presentes</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="conteudo" id="local">
+       
+         <img src="img/fotoFinal.jpeg" id="logo"> 
+    </div>
+    <audio src="audio/musica.mp3" id="audio">
+
+    </audio>
+
+  
+
+</body>
+<script>
+
+    const btn = document.querySelector('.btn-js');
+    btn.addEventListener("click", showModal);
+
+    function playaudio() {
+        const audio = document.querySelector("#audio");
+        audio.play();
+    }
+
+    function removeModal() {
+        const modal = document.querySelector(".abrir");;
+        modal.classList.add("oculto");
+    }
+
+    function showModal() {
+        const home = document.querySelector(".home");
+        home.classList.add("ativo");
+    }
+
+     // Contagem regressiva
+     const weddingDate = new Date('August 3, 2024 15:00:00').getTime();
+
+const countdownFunction = setInterval(function () {
+    const now = new Date().getTime();
+    const distance = weddingDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+
+    if (distance < 0) {
+        clearInterval(countdownFunction);
+        document.getElementById("countdown").innerHTML = "O grande dia chegou!";
+    }
+}, 1000);
+
+</script>
+<script src="simple-anime.js"></script>
+
+</html>

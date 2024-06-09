@@ -1,0 +1,78 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+img{
+  width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+ul,
+p,
+blockquote,
+dd {
+    margin: 0px;
+}
+
+ul {
+    padding: 0px;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 800px;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fadeInDown {
+    transform: translate3d(0, -20px, 0);
+}
+
+
+.js [data-anime] {
+    opacity: 0;
+}
+
+.js .anime {
+    opacity: 1;
+    transform: none;
+    transition: transform 0.8s, opacity 0.8s;
+
+}
+
+/* Estilos para telas com largura máxima de 412px */
+@media (max-width: 412px) {
+    body {
+      font-size: 16px; /* Reduza o tamanho da fonte do corpo */
+    }
+  
+    h1, h2, h3, h4, ul, p, blockquote, dd {
+      font-size: inherit; /* Mantenha o tamanho da fonte padrão para cabeçalhos e parágrafos */
+    }
+  
+    .container {
+      max-width: 90%; /* Reduza a largura máxima do contêiner */
+    }
+  
+    .fadeInDown {
+      transform: none; /* Reduza a transformação do elemento */
+    }
+  
+    .js [data-anime] {
+      opacity: 1; /* Ajuste a opacidade para que os elementos sejam visíveis */
+    }
+  }
+  

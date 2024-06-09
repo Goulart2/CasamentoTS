@@ -1,0 +1,46 @@
+.size {
+    font: 300 1.1rem "Roboto Slab", sans-serif;
+}
+
+.size-b {
+    font: 500 1.2rem "Roboto Slab", sans-serif;
+}
+
+
+.font-1-300 {
+    font: 300 0.8rem "Roboto Slab", sans-serif;
+}
+
+.font-1-400 {
+    font: 400 1.1rem "Roboto Slab", sans-serif;
+}
+
+.font-1-400-s {
+    font: 400 0.9rem "Roboto Slab", sans-serif;
+}
+
+.font-1-400-m {
+    font: 400 1.2rem "Roboto Slab", sans-serif;
+}
+
+
+@font-face {
+    font-family: HighSpirited;
+    src: url("HighSpirited.ttf");
+}
+
+@font-face {
+    font-family: CenturyGothic;
+    src: url("Century\ Gothic.ttf");
+}
+
+@media(min-width:355px) {
+    .font-Hs-sm {
+        font: 4.9rem "HighSpirited", sans-serif;
+        color: #032d03;
+    }
+
+    .font-CG-sm {
+        font: 1rem "CenturyGothic", sans-serif;
+    }
+}

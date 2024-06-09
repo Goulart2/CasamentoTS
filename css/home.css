@@ -1,0 +1,218 @@
+body {
+  overflow: hidden;
+}
+
+body:has(.ativo) {
+  overflow: auto;
+}
+
+.abrir {
+  background: rgb(255, 255, 255);
+  background: radial-gradient(circle, rgba(255, 255, 255, 1) 57%, rgba(231, 245, 222, 1) 78%, rgba(213, 240, 196, 1) 97%);
+  position: fixed;
+  left: 0px;
+  top: 0px;
+
+  width: 100vw;
+  height: 100vh;
+  z-index: 200;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: #353535;
+  overflow: auto;
+}
+
+
+.bntConvite {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.bntConvite button {
+  background-color: #2a7b3e;
+
+  padding: 8px;
+  border: none;
+  border-radius: 100px;
+}
+
+.bntConvite img {
+  height: 32px;
+  width: 37px;
+}
+
+.bntConvite p {
+  font: 20px "CenturyGothic", sans-serif;
+  font-weight: bold;
+  color: #0a3f17;
+}
+
+.abrir.oculto {
+  display: none;
+}
+
+
+.js .home {
+  opacity: 0;
+}
+
+.home.ativo {
+  position: relative;
+  background-color: #fafffc;
+
+  opacity: 1;
+
+  transform: none;
+  transition: transform 0.8s, opacity 1.5s;
+}
+
+.containerImgCasal {
+  position: relative;
+}
+
+.beforeImg {
+  background: linear-gradient(to top, #fafffc, transparent);
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+
+  width: 100%;
+  height: 180px;
+
+  z-index: 200;
+}
+
+
+.imgVersiculo {
+  display: flex;
+  justify-content: center;
+
+  padding-top: 30px;
+}
+
+.imgVersiculo p {
+  width: 302px;
+
+  line-height: 33px;
+  font: 1rem "CenturyGothic", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.4px;
+  color: #0a3f17;
+}
+
+.nomes {
+  padding-top: 20px;
+  padding-bottom: 80px;
+
+  font-size: 40px;
+  color: #0c890c;
+  text-align: center;
+}
+
+.c_textInformation {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 100%;
+
+  padding-top: 39px;
+}
+
+.c_textInformation p:nth-child(2) {
+  padding-bottom: 7px;
+  padding-top: 17px;
+
+  font-size: 13px;
+  color: #0a3f17;
+  text-align: center;
+  font-family: "CenturyGothic", sans-serif;
+}
+
+.informationDate {
+  width: 66%;
+
+  color: #0a3f17;
+  font: 2.5rem "HighSpirited", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-align: center;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  padding-bottom: 50px;
+  padding-top: 40px;
+
+  font-family: "HighSpirited", sans-serif;
+  ;
+  color: #0a3f17;
+}
+
+.linkContents a {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+
+  text-align: center;
+
+  z-index: 1;
+}
+
+.linkContents a>div>img {
+  height: 32px;
+  width: 32px;
+
+  border: 1px solid rgba(255, 255, 255, 0.27);
+  border-radius: 100px;
+  padding: 4px;
+}
+
+.linkContents a>div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #2a7b3e;
+  padding: 10px;
+  height: 30px;
+  width: 30px;
+
+  box-shadow: 3px 2px 5px 0px #00000046;
+  border-radius: 100px;
+}
+
+
+
+footer h3 {
+  color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-style: oblique;
+  text-align: center;
+}
+
+footer {
+  background-color: #fafffc;
+  padding: 10px 0;
+}
+
+.iconCOnvite {
+  width: 70px;
+  height: 70px;
+}
